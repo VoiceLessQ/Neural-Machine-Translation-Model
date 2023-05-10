@@ -21,7 +21,6 @@ The training data is stored in the `data` directory. You need to provide two tex
 git clone https://github.com/your-username/multi-lingual-nmt-model.git
 
 2. Install the required dependencies:
-pip install -r requirements.txt
 
 3. Modify the file paths in the script:
 In the `load_data()` function, update the file paths to point to your `english.txt` and `danish.txt` files.
