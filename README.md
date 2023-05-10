@@ -1,48 +1,63 @@
-# Multi-lingual Neural Machine Translation Model
+Neural Machine Translation Model
+This repository contains a Neural Machine Translation (NMT) model implemented in Python. The model is designed to translate text from English to Danish using advanced deep learning techniques.
 
-This repository contains code for training a multi-lingual neural machine translation model using Keras and TensorFlow. The model is designed to translate sentences from English to Danish and vice versa.
+Overview
+The Neural Machine Translation Model is built to facilitate accurate and efficient translation between English and Danish languages. By leveraging the power of deep learning, the model achieves high-quality translation results. It is trained on a large corpus of English and Danish text data, allowing it to learn the intricate patterns and structures of both languages.
 
-## Requirements
+Features
+Accurate and reliable translation from English to Danish
+Deep learning architecture for enhanced language understanding
+Support for handling complex sentence structures and idiomatic expressions
+Efficient and scalable implementation
+Usage
+To use the Neural Machine Translation Model, follow these steps:
 
-- Python 3.x
-- TensorFlow 2.x
-- Keras
-- nltk
-- numpy
-- pandas
+# Neural Machine Translation Model
 
-## Dataset
+This repository contains a Neural Machine Translation (NMT) model implemented in Python. The model translates text from English to Danish using deep learning techniques.
 
-The training data is stored in the `data` directory. You need to provide two text files: `english.txt` and `danish.txt`, containing English and Danish sentences respectively. Each sentence should be on a separate line.
+## Setup
+
+1. Clone the repository:
+git clone https://github.com/VoiceLessQ/Neural-Machine-Translation-Model.git
+
+2. Navigate to the project directory:
+cd Neural-Machine-Translation-Model
+
+
+3. Download the GloVe word embeddings:
+- Download the `glove.6B.50d.txt` file from the official GloVe website (https://nlp.stanford.edu/projects/glove/).
+- Place the `glove.6B.50d.txt` file in the `glove` directory of the project.
 
 ## Usage
 
-1. Clone the repository:
-git clone https://github.com/your-username/multi-lingual-nmt-model.git
+1. Prepare the data:
+- Place your English and Danish text data files in the `data` directory. Make sure they are named `english.txt` and `danish.txt`, respectively.
+- Each line in the data files should contain a single sentence.
 
-2. Install the required dependencies:
+2. Train the NMT model:
+- Run the following command to train the model:
+  ```
+  python train.py
+  ```
+- The model will be trained using the provided data files and the pre-trained GloVe word embeddings.
 
-3. Modify the file paths in the script:
-In the `load_data()` function, update the file paths to point to your `english.txt` and `danish.txt` files.
+3. Translate text:
+- After training, you can use the trained model to translate English text to Danish.
+- Open the `translate.py` file and modify the `input_text` variable with the desired English text to be translated.
+- Run the following command to perform the translation:
+  ```
+  python translate.py
+  ```
+- The translated text will be displayed in the console.
 
-4. Run the script:
-python main.py
-
-This will start the training process. The model will be saved as `english_danish.h5` upon completion.
-
-
-## Model Architecture
-
-The neural machine translation model uses a sequence-to-sequence architecture with LSTM layers. The model consists of an encoder and a decoder, both using multiple LSTM layers. The input sentences are tokenized and converted to integer sequences for training.
-
-## Results
-
-After training the model, you can evaluate its performance using various metrics such as BLEU score or by translating new sentences. Feel free to modify the script to suit your specific requirements.
+4. Experiment and customize:
+- Feel free to experiment with different hyperparameters, model architectures, or datasets to improve the translation performance.
+- You can modify the code in the `train.py` file to customize the model architecture or training process.
 
 ## Contributing
-
-Contributions to this project are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+Contributions to the Neural Machine Translation Model project are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
 ## License
+This project is licensed under the [MIT License](LICENSE).
 
-This project is licensed under the MIT License.
